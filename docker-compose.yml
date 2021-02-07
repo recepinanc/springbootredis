@@ -3,11 +3,9 @@ services:
     web:
         build: ./springboot
         ports:
-            - "8080:8080"
-        links:
-            - redis
-    redis:
+            - "8888:8080"
+    containerizedredis:
         build: ./redis
         image: "redis:alpine"
         ports:
-            - "6379:6379"
+            - "16378:16379"

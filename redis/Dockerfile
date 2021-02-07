@@ -1,3 +1,4 @@
 FROM redis
-COPY redis.conf /redis/redis.conf
-CMD [ "redis-server" ]
+EXPOSE 16379
+COPY redis.conf /usr/local/etc/redis/redis.conf
+CMD [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
