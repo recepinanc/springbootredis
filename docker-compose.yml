@@ -9,6 +9,5 @@ services:
     redis:
         build: ./redis
         image: "redis:alpine"
-        hostname: containerizedredis
         ports:
             - "6379:6379"

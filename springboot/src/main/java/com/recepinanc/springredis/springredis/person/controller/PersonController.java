@@ -24,7 +24,7 @@ public class PersonController
     public String create(@RequestBody Person person)
     {
         repository.save(person);
-        return "Saved";
+        return "Saved a new person with the key: " + person.getId();
     }
 
     @GetMapping("/{id}")
